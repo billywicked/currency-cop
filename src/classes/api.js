@@ -265,7 +265,16 @@ class ApiClient {
       items
     })
   }
+	let isQualifier = league.indexOf(' Qualifier') > -1
 
+    let output = []
+		if (isQualifier)
+		{
+			return;
+		} 
+
+	let output = []
+		
   async getTabsList ({ league, skipCache }) {
     let cacheName = `${this.accountName}-${league}-tabs`
     if (!skipCache) {
